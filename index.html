@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>...with love</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="scene" id="scene">
+    <!-- Base background -->
+    <div class="scene-bg"></div>
+
+    <!-- Parallax / animatable layers cut from same art -->
+    <div class="layer layer-cloud-wind"></div>
+    <div class="layer layer-rainbow"></div>
+    <div class="layer layer-foreground"></div>
+
+    <!-- Night overlay + moon -->
+    <div class="night-overlay"></div>
+    <div class="moon" id="moon"></div>
+
+    <!-- Name backdrop -->
+    <div class="name-backdrop" id="nameBackdrop" aria-hidden="true"></div>
+
+    <!-- Content overlay -->
+    <header class="site-header">
+      <h1 class="site-title" id="siteTitle">...with love</h1>
+    </header>
+
+    <main class="site-main">
+      <form id="messageForm" autocomplete="off" class="message-form">
+        <div class="message-row">
+          <label for="toInput" class="visually-hidden">Who is this going to?</label>
+          <input
+            type="text"
+            id="toInput"
+            placeholder="Who is this going to?"
+            maxlength="120"
+          />
+        </div>
+        <div class="message-row message-row-bottom">
+          <label for="messageInput" class="visually-hidden">Anything you want to say?</label>
+          <textarea
+            id="messageInput"
+            maxlength="300"
+            rows="1"
+            placeholder="Anything you want to say?"
+          ></textarea>
+          <button type="submit" class="send-btn" aria-label="Send message">
+            <span class="send-arrow" aria-hidden="true">➤</span>
+          </button>
+        </div>
+      </form>
+
+      <p class="bottom-hint">Send a message to someone among the stars</p>
+    </main>
+
+    <!-- Envelope with red seal -->
+    <div class="envelope" id="envelope" aria-hidden="true">
+      <div class="envelope-body">
+        <div class="envelope-flap"></div>
+        <div class="envelope-seal"></div>
+      </div>
+    </div>
+
+    <!-- Final title -->
+    <div class="final-title" id="finalTitle">
+      <span>With darkness, there is light</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
